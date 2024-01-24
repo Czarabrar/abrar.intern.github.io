@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-image: url("bg.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+}
+.form-box{
+    width:400px;
+    height: 560px;
+    position:  relative;
+    margin: 10% auto;
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+    border-radius:30px;
+    
+}
+.button-box{
+    width: 290px;
+    margin: 50px auto;
+    position: relative;
+    
+    box-shadow:0 0 5px  #349beb;
+}
+.button{
+    padding:10px 40px;
+    cursor:pointer;
+    background: transparent;
+    border:0;
+    outline:none;
+    position:relative; 
+}
+#btn{
+    top:0;
+    left:0;
+    position:absolute;
+    width:140px;
+    height:100%;
+    background:linear-gradient(to right ,#349beb,#7134eb);
+    margin-right:5px;
+    transition:.5s;
+}
+.input-group{
+     top:180px;
+     position: absolute;
+     width: 330px;
+     transition: .5s;
+}
+.input-field{
+    height: 40px;
+    width:100%;
+    margin:10px 0;
+    border-left: 0;
+    border-right:0;
+    border-top:0;
+    border-bottom:1px solid #999;
+    outline:none;
+    padding:10px;
+    text-align: center;
+     
+}
+
+
+.submit-btn{
+    width:85%;
+    padding:10px 30px;
+    cursor:pointer;
+    display:block;
+    margin: 20px auto;
+    background:linear-gradient(to right ,#349beb,#7134eb);
+    border:0;
+    outline:none;
+    border-radius:30px;
+    
+}
+#signup{
+    left:40px;
+}
+.input-icons i {
+    position: absolute;
+}
+ 
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+ 
+.icon {
+    padding: 20px;
+    color: green;
+    min-width: 50px;
+    text-align: center;
+}
+input:hover{
+    border:2px solid blue;
+}
