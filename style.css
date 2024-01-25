@@ -18,7 +18,7 @@
     height: 560px;
     position:  relative;
     margin: 10% auto;
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.4);
     box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
     border-radius:30px;
     
@@ -27,7 +27,7 @@
     width: 290px;
     margin: 50px auto;
     position: relative;
-    
+    display: flex;
     box-shadow:0 0 5px  #349beb;
 }
 .button{
@@ -115,13 +115,17 @@ input.check{
 input:hover{
     border:2px solid blue;
 }
-@media (max-width:600px){
+@media (max-width:550px){
     .container{
         display: flex;
         flex-direction: column;   
+        width:100%;
     }
     .form-box{
         display: flex;
+        width: 100%;
         flex-direction: column;
+        background-image: url("bg.jpeg");
+        margin:20% auto;
     }
 }
