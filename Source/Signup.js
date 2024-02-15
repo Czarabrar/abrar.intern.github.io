@@ -1,22 +1,21 @@
 import React,{useState} from "react";
 import{StyleSheet, Text,TextInput,View,TouchableOpacity,ToastAndroid} from 'react-native';
-import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "@react-navigation/native";
 import { Picker } from "@react-native-picker/picker";
 
 
 
 const Signup = () => {
-
+    // const navigation=useNavigation();
     const [formdata,setFormData]=useState({
         name:'',
         email:'',
-        
+        age:'',
         password:'',
         confirmPassword:'',
     });
-    const[age,setAge] = useState('');
-    const ages = Array.from({length:100},(_,i) =>String(i+1));
-    // const navigation = useNavigation();
+    
+    
     const showToast = () =>{
         ToastAndroid.show('data are entered',ToastAndroid.CENTER,
         ToastAndroid.SHORT );
@@ -24,7 +23,7 @@ const Signup = () => {
     const [emptyerror,setEmptyError] = useState({
         nameError:false,
         emailError:false,
-        
+        ageError:false,    
         passwordError:false,
         confirmPasswordError:false,
     })
@@ -37,21 +36,19 @@ const Signup = () => {
       setEmptyError(false);
     }
 
-    const handleAgeChange =(age)=>{
-    setAge(age);
-    }
+   const userDetails = [{username:formdata.name,age:formdata.age,email:formdata.email,password:formdata.password,confirmPassword:formdata.confirmPassword,}]
    
     const handleSubmit = () => {
-    if(((formdata.name===''||formdata.email===''||formdata.password===''||formdata.confirmPassword==='')&&age==='')){
+    if((formdata.name===''||formdata.email===''||formdata.password===''||formdata.confirmPassword==='')){
             setEmptyError(true);
-            
+           
         } 
     else
     {
        setEmptyError(false);
-       showToast()
+      showToast()
 
-      console.log('form data:',{...formdata,age:age});
+      console.log('form data:',userDetails);
     //    console.log('age:',age);
        
     }
@@ -79,11 +76,11 @@ const Signup = () => {
                         placeholderTextColor={'#B2BABB'}>
                             </TextInput>
                     </View>
-                    <Picker selectedValue={age} value={age}
-                    onValueChange={handleAgeChange}>
-                        <Picker.Item label="select age" value={null} />
-                        {ages.map((age) => (
-                            <Picker.Item key={age} label={age}  value={age}/>
+                    <Picker selectedValue={formdata.age} 
+                    onValueChange={value =>handleChange('age',value)}>
+                        <Picker.Item label="select age" value="" />
+                        {[...Array(100)].map((_,i)=>
+                        (<Picker.Item key={i} label={`${i+1}`} value={`${i+1}`}/>
                         ))}
                         
                         </Picker>
@@ -170,4 +167,5 @@ const Styles = StyleSheet.create({
         },
       
 })
+
 export default Signup;

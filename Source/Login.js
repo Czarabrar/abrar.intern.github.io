@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation ,useRoute} from '@react-navigation/native';
 import React, { useState } from 'react';
 import {
   View,
@@ -11,15 +11,17 @@ import {
 } from 'react-native';
 import Snackbar from 'react-native-snackbar';
 
+
 const Login = () => {
 
-const navigation = useNavigation();
+
+const navigate = useNavigation();
 const bgimage = require('./images/background.jpg')
 const logo = require('./images/logo2.png')
 const [email,setEmail]=useState('');
 const [password,setPassword] = useState('');
-const constemail = "abc@gmail.com";
-const constpasswd = "12345";
+ const constemail = "abc@gmail.com";
+ const constpasswd = 12345;
 
 const[emptyemail,setEmptyemail] = useState(false);
 const[emptypaswd,setEmptypaswd] = useState(false);
@@ -152,7 +154,7 @@ return (
 </View>
 <View style={Styles.signup}>
   <Text style={{color:'#ffffaf'}}>
-    Dont have an account ? <Text style={{textDecorationLine:'underline' ,color:'#ffffff', fontSize:15}}onPress={()=>navigation.push('Signup')}>SignUp</Text>
+    Dont have an account ? <Text style={{textDecorationLine:'underline' ,color:'#ffffff', fontSize:15}}onPress={()=>navigate.push('Signup')}>SignUp</Text>
   </Text>
 </View>
 
