@@ -12,16 +12,16 @@ import {
 import Snackbar from 'react-native-snackbar';
 
 
-const Login = () => {
+const Login = ({route}) => {
 
-
-const navigate = useNavigation();
+const{ emailcheck,passwordcheck } = route.params;
+const navigation = useNavigation();
 const bgimage = require('./images/background.jpg')
 const logo = require('./images/logo2.png')
 const [email,setEmail]=useState('');
 const [password,setPassword] = useState('');
- const constemail = "abc@gmail.com";
- const constpasswd = 12345;
+//  const constemail = "abc@gmail.com";
+//  const constpasswd = 12345;
 
 const[emptyemail,setEmptyemail] = useState(false);
 const[emptypaswd,setEmptypaswd] = useState(false);
@@ -30,13 +30,14 @@ const handleemailChange = (text) =>{
 setEmail(text);
 setEmptyemail(false);
 }
+
 const handlepasswordChange = (text) =>{
   setPassword(text);
   setEmptypaswd(false);
 }
-const buttonfunc =() => {
 
-  if((email===constemail)&&(password===constpasswd)){
+const buttonfunc =() => {
+    if((email===emailcheck)&&(password===passwordcheck)){
     setEmptyemail(false);
     setEmptypaswd(false);
   Snackbar.show({
@@ -49,9 +50,8 @@ const buttonfunc =() => {
   }
   });
 }
-else if(email||password===''){
+  else if(email||password===''){
   setEmptyemail(true);
-  
   setEmptypaswd(true);
   Snackbar.show({
   text:'Wrong user id/password',
@@ -61,7 +61,6 @@ else if(email||password===''){
     text:'user',
     textColor:'grey',
 }
-
 });
 }
 
@@ -154,7 +153,7 @@ return (
 </View>
 <View style={Styles.signup}>
   <Text style={{color:'#ffffaf'}}>
-    Dont have an account ? <Text style={{textDecorationLine:'underline' ,color:'#ffffff', fontSize:15}}onPress={()=>navigate.push('Signup')}>SignUp</Text>
+    Dont have an account ? <Text style={{textDecorationLine:'underline' ,color:'#ffffff', fontSize:15}}onPress={()=>navigation.push('Signup')}>SignUp</Text>
   </Text>
 </View>
 

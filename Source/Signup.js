@@ -1,12 +1,12 @@
 import React,{useState} from "react";
 import{StyleSheet, Text,TextInput,View,TouchableOpacity,ToastAndroid} from 'react-native';
-// import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { Picker } from "@react-native-picker/picker";
 
 
 
 const Signup = () => {
-    // const navigation=useNavigation();
+     const navigation=useNavigation();
     const [formdata,setFormData]=useState({
         name:'',
         email:'',
@@ -47,7 +47,11 @@ const Signup = () => {
     {
        setEmptyError(false);
       showToast()
-
+      navigation.navigate("Login",
+      { 
+        emailcheck:formdata.email,
+        passwordcheck:formdata.password
+    })
       console.log('form data:',userDetails);
     //    console.log('age:',age);
        
