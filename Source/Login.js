@@ -13,10 +13,9 @@ import Snackbar from 'react-native-snackbar';
 
 
 const Login = ({route}) => {
-
-const{ emailcheck,passwordcheck } = route.params;
-const navigation = useNavigation();
-const bgimage = require('./images/background.jpg')
+  const navigation = useNavigation();
+  const{emailcheck,passwordcheck } = route.params;
+const bgimage = require('./images/bg2.jpg')
 const logo = require('./images/logo2.png')
 const [email,setEmail]=useState('');
 const [password,setPassword] = useState('');
@@ -49,6 +48,7 @@ const buttonfunc =() => {
       textColor:'grey',
   }
   });
+ // navigation.navigate('Home')
 }
   else if(email||password===''){
   setEmptyemail(true);
@@ -152,8 +152,8 @@ return (
 
 </View>
 <View style={Styles.signup}>
-  <Text style={{color:'#ffffaf'}}>
-    Dont have an account ? <Text style={{textDecorationLine:'underline' ,color:'#ffffff', fontSize:15}}onPress={()=>navigation.push('Signup')}>SignUp</Text>
+  <Text style={{color:'#00a8b5'}}>
+    Dont have an account ? <Text style={{textDecorationLine:'underline' ,color:'#de4383', fontSize:15}}onPress={()=>navigation.push('Signup')}>SignUp</Text>
   </Text>
 </View>
 
@@ -198,7 +198,7 @@ Imagestyle:{
 },
 HeaderText:{
 fontSize:30,
-color:'#ffafaf',
+color:'#774898',
 fontWeight:'bold',
 textAlign:'center',
 },
@@ -223,7 +223,7 @@ inputbox:{
 },
 Textinput:{
   borderWidth:2,
-  borderColor:'#034078',
+  borderColor:'#774898',
   marginBottom:30,
   borderRadius:8,
   paddingLeft:30,
@@ -236,7 +236,7 @@ Textinput:{
 textlink:{
 textAlign:'right',
 textDecorationLine:'underline',
-color:'#034078',
+color:'#774898',
 marginTop:-20,
 },
 buttoncontainer:{
@@ -245,7 +245,7 @@ width:'100%',
 
 },
 button:{
-  backgroundColor:'#034078',
+  backgroundColor:'#774898',
   height:50,
   borderRadius:10,
   alignItems:'center',
@@ -265,19 +265,21 @@ linecontainer:{
 line:{
   flex: 1,
   height: 1,
-  backgroundColor: '#034078'
+  backgroundColor: '#774898'
 },
 logocontainer:{
 flexDirection:'row',
 alignContent:'space-around'
 },
 logo:{
-backgroundColor:'#034078',
+backgroundColor:'#774898',
 padding:10,
 borderRadius:10,
 marginLeft:40,
 marginRight:40,
 borderRadius:50,
+elevation:10,
+borderColor:'#de4383'
 },
 logostyle:{
   width:40,
@@ -287,7 +289,8 @@ logostyle:{
 },
 signup:{
   marginTop:30,
-  color:'white'
+  color:'white',
+  elevation:10,
 }
 })
 export default Login;

@@ -60,7 +60,7 @@ const Signup = () => {
 
     return (
         <View style={Styles.MainContainer}>
-            <View style={[Styles.Container,Styles.elevation]}>
+            <View style={Styles.Container}>
                 <View style={Styles.formbox}>
                     <View style={Styles.inputbox}>
                         <TextInput style={[Styles.Textinput,emptyerror&&Styles.Error]}
@@ -68,7 +68,7 @@ const Signup = () => {
                         
                         onChangeText={value=>handleChange('name',value)}
                         
-                        placeholderTextColor={'#B2BABB'}>
+                        placeholderTextColor={'#232323'}>
                             </TextInput>
                     </View>
                     
@@ -77,7 +77,7 @@ const Signup = () => {
                         placeholder="Enter your Email"
                         
                         onChangeText={value=>handleChange('email',value)}
-                        placeholderTextColor={'#B2BABB'}>
+                        placeholderTextColor={'#232323'}>
                             </TextInput>
                     </View>
                     <Picker selectedValue={formdata.age} 
@@ -93,7 +93,7 @@ const Signup = () => {
                         placeholder="Enter your Password"
                         onChangeText={value=>handleChange('password',value)}
                         secureTextEntry
-                        placeholderTextColor={'#B2BABB'}>
+                        placeholderTextColor={'#232323'}>
                             </TextInput>
                     </View>
                     <View style={Styles.inputbox}>
@@ -101,7 +101,7 @@ const Signup = () => {
                         placeholder="Confirm your Password"
                         secureTextEntry
                         onChangeText={value=>handleChange('confirmPassword',value)}
-                        placeholderTextColor={'#B2BABB'}>
+                        placeholderTextColor={'#232323'}>
                             </TextInput>
                     </View>
                     <View style={Styles.buttoncontainer}>
@@ -123,24 +123,24 @@ const Styles = StyleSheet.create({
       flex:1,
       alignItems:'center'  ,
       justifyContent:'center',
-      backgroundColor:'#FAE5D3',
+      backgroundColor:'#e0ffcd',
     },
     Container:{
         width:'97%',
-    
-        backgroundColor:'#ffffff',
+        borderWidth:0.5,
+        borderColor:'#e4ba9e',
+        backgroundColor:'#e2f2d8',
         paddingHorizontal:30,
         borderRadius:20,
         position:'absolute',
+        elevation:30,
+        borderColor:'#de4383',
     },
     formbox:{
        
         marginVertical:40,
     },
-    elevation: {  
-        shadowColor: '#52006A',  
-        elevation: 20,  
-      },  
+    
       Textinput:{
         borderWidth:1,
         borderColor:'#000000',
@@ -158,7 +158,7 @@ const Styles = StyleSheet.create({
         marginTop:20,
         },
         button:{
-          backgroundColor:'#EDBB99',
+          backgroundColor:'#de4383',
           height:50,
           borderRadius:10,
           alignItems:'center',
