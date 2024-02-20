@@ -17,7 +17,7 @@ const Main = () => {
             </Text>
         </View>
         <View style = {Styles.button}>
-        <TouchableOpacity onPress={()=>navigation.push('Signup')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Signup')}>
             <Text style={Styles.buttontext}>lets begin</Text>
         </TouchableOpacity>
         </View>
@@ -39,6 +39,7 @@ img:{
 imagestyle:{
     width:'50%',
     height:'50%',
+    resizeMode:'contain'
     
 },
 header:{

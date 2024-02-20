@@ -48,7 +48,7 @@ const buttonfunc =() => {
       textColor:'grey',
   }
   });
- // navigation.navigate('Home')
+  navigation.navigate('DrawerHome')
 }
   else if(email||password===''){
   setEmptyemail(true);

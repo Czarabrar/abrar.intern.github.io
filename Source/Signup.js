@@ -14,10 +14,12 @@ const Signup = () => {
         password:'',
         confirmPassword:'',
     });
-    
+    const wrongToast = () =>{
+        ToastAndroid.show('please enter the data',ToastAndroid.CENTER)
+    }
     
     const showToast = () =>{
-        ToastAndroid.show('data are entered',ToastAndroid.CENTER,
+        ToastAndroid.show('data are entered',ToastAndroid.TOP,
         ToastAndroid.SHORT );
     }
     const [emptyerror,setEmptyError] = useState({
@@ -41,7 +43,7 @@ const Signup = () => {
     const handleSubmit = () => {
     if((formdata.name===''||formdata.email===''||formdata.password===''||formdata.confirmPassword==='')){
             setEmptyError(true);
-           
+            wrongToast()
         } 
     else
     {
