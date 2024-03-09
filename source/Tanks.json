@@ -1,0 +1,55 @@
+{
+  "Tanks":[
+   
+    {
+        "id":"Tank1",
+        "name":"tank1",
+        "phlevelvalue":"11.05pH",
+        "flowlevelvalue":"10.05 L/min",
+        "tdslevelvalue":"330ppm",
+        "timevalue":"01:30 Hours",
+        "capacityvalue":"2500 Litres",
+        "consumptionvalue":"1500 Litres"
+    },
+    {
+      "id":"Tank2",
+      "name":"tank2",
+      "phlevelvalue":"12.05pH",
+      "flowlevelvalue":"1.05 L/min",
+      "tdslevelvalue":"310ppm",
+      "timevalue":"02:30 Hours",
+      "capacityvalue":"2500 Litres",
+      "consumptionvalue":"1500 Litres"
+  },
+  {
+    "id":"Tank3",
+    "name":"tank3",
+    "phlevelvalue":"13.05pH",
+    "flowlevelvalue":"13.05 L/min",
+    "tdslevelvalue":"310ppm",
+    "timevalue":"03:30 Hours",
+    "capacityvalue":"3500 Litres",
+    "consumptionvalue":"3500 Litres"
+},
+{
+  "id":"Tank4",
+  "name":"tank4",
+  "phlevelvalue":"15.05pH",
+  "flowlevelvalue":"45.05 L/min",
+  "tdslevelvalue":"510ppm",
+  "timevalue":"04:30 Hours",
+  "capacityvalue":"4500 Litres",
+  "consumptionvalue":"4500 Litres"
+},
+{
+  "id":"Tank5",
+  "name":"tank5",
+  "phlevelvalue":"55.05pH",
+  "flowlevelvalue":"5.05 L/min",
+  "tdslevelvalue":"510ppm",
+  "timevalue":"05:30 Hours",
+  "capacityvalue":"5500 Litres",
+  "consumptionvalue":"5500 Litres"
+}
+]
+  }

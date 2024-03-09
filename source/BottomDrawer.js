@@ -1,5 +1,5 @@
 import { Text, StyleSheet, View } from 'react-native'
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Home from './screens/Home';
 import Mytanks from './screens/Mytanks'; 
@@ -7,10 +7,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Favourite from './screens/Favourite';
 import Notification from './screens/Notification';
 import FAQs from './screens/FAQsScreen';
+import HomeCards from './screens/HomeCards';
 
 const tab = createBottomTabNavigator();
 const BottomDrawer = () =>{
-  
+  const [showTabNavigator, setShowTabNavigator] = useState(false);
     return (
      <tab.Navigator
      screenOptions={{

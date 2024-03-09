@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
+import SwipeButton from 'rn-swipe-button';
 
-const Notification = ()=> {
-return (
-  <View>
-    
-  </View>
-)
-}
+const Notification = () => {
+  return (
+    <View>
+      <SwipeButton />
+    </View>
+  );
+};
+
 export default Notification;
